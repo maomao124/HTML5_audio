@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：HTML5_audio
+  File name(文件名): test4
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/12
+  Time(创建时间)： 10:23
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            font-size: 35px;
+            color: lime;
+        }
+    </style>
+</head>
+<body>
+<audio src="music.mp3" id="music">
+
+</audio>
+
+<button id="button" onclick="toChange()">播放</button>
+</body>
+
+<script>
+    var music = document.getElementById('music')
+    var button = document.getElementById('button')
+
+    function toChange()
+    {
+        if (music.paused)
+        {
+            music.play()
+            button.innerHTML = "暂停"
+            button.style.color = "red"
+        }
+        else
+        {
+            music.pause()
+            button.innerHTML = "播放"
+            button.style.color = "lime"
+        }
+    }
+</script>
+
+</html>
