@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：HTML5_audio
+  File name(文件名): test2
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/12
+  Time(创建时间)： 10:20
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="support"></div>
+<script>
+    function test()
+    {
+        //canPlayType()报告当前浏览器能够播放给定 MIME 类型的媒体的可能性
+        var supportAudio = !!document.createElement("audio").canPlayType;
+        if (supportAudio)
+        {
+            document.getElementById("support").innerHTML = "浏览器支持HTML5音频";
+        }
+        else
+        {
+            document.getElementById("support").innerHTML = "浏览器不支持HTML5音频";
+        }
+    }
+
+    test();
+</script>
+</body>
+</html>
